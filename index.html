@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laksh Saluja | AI & Data Science Portfolio</title>
+    <!-- Modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Dynamic cursor follower -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar">
+        <div class="logo">LAKSH<span class="accent">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#coding">Coding Practice</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section observer-hidden">
+            <div class="hero-content">
+                <p class="greeting">Hi, I'm</p>
+                <h1 class="glitch-text" data-text="Laksh Saluja">Laksh Saluja</h1>
+                <h2 class="role">Data Scientist & <span class="accent">AI Engineer</span></h2>
+                <p class="hero-description">Transforming complex data into actionable insights. Exploring deep learning, eco-tech, and intelligent systems.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            
+            <!-- Profile Image -->
+            <div class="hero-image-wrapper">
+                <div class="hero-image-ring">
+                    <img src="assets/profile.jpg" alt="Laksh Saluja" class="hero-profile-img">
+                </div>
+            </div>
+
+            <!-- Abstract background shape -->
+            <div class="hero-blob"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section observer-hidden">
+            <div class="section-header">
+                <h2>Behind the <span class="accent">Code</span></h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="about-content glass-panel">
+                <p>I am an ambitious developer with a strong focus on <strong>Machine Learning</strong>, <strong>Data Analytics</strong>, and <strong>AI-driven solutions</strong>. I enjoy tackling real-world problems—from analyzing environmental impacts to building dynamic memory management tools.</p>
+                <p>My work combines clean code with advanced algorithms to create impactful, intelligent applications.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section observer-hidden">
+            <div class="section-header">
+                <h2>Technical <span class="accent">Skills</span></h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category glass-panel">
+                    <h3>Languages</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">XML</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category glass-panel">
+                    <h3>Frameworks</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">Flask</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-panel">
+                    <h3>Tools / Platforms</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Tableau</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section observer-hidden">
+            <div class="section-header">
+                <h2>Professional <span class="accent">Experience</span></h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="experience-item glass-panel">
+                    <div class="experience-header">
+                        <h3>Data Analyst Intern</h3>
+                        <span class="company-name accent">WishKaro</span>
+                        <span class="experience-date">June 2025 - July 2025</span>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Analyzed 9,900+ transactions through EDA to uncover sales drivers and customer behavior patterns.</li>
+                        <li>Engineered 3+ financial metrics (sales, discounts, profit) using Python, improving insights by 15%.</li>
+                        <li>Built 5+ dashboards in Power BI and Excel, analyzing ₹4.2 Cr+ net sales and 9900+ customers.</li>
+                        <li>Analyzed sales distribution and found 2 regions driving 42% of total revenue for better market focus.</li>
+                    </ul>
+                    <div class="tech-stack-card" style="margin-top: 1.5rem;">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coding Practice Section -->
+        <section id="coding" class="coding-section observer-hidden">
+            <div class="section-header">
+                <h2>Coding <span class="accent">Practice</span></h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="coding-stats-grid">
+                <!-- Highlights Panel -->
+                <div class="stats-panel highlights-panel glass-panel">
+                    <div class="stat-box">
+                        <i class="fa-solid fa-code stat-icon"></i>
+                        <div class="stat-info">
+                            <h4>Total Questions</h4>
+                            <span class="stat-number accent">300</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-box">
+                        <i class="fa-solid fa-code-commit stat-icon"></i>
+                        <div class="stat-info">
+                            <h4>Submissions</h4>
+                            <span class="stat-number accent">539</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DSA Breakdown Panel -->
+                <div class="stats-panel difficulty-panel glass-panel">
+                    <h3>DSA Complexity</h3>
+                    <div class="circular-progress">
+                        <div class="inner-circle">
+                            <span class="total-dsa">245</span>
+                            <span class="dsa-label">Solved</span>
+                        </div>
+                    </div>
+                    <div class="difficulty-legends">
+                        <div class="legend-item">
+                            <span class="dot easy"></span>
+                            <span class="label">Easy</span>
+                            <span class="count">124</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="dot medium"></span>
+                            <span class="label">Medium</span>
+                            <span class="count">109</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="dot hard"></span>
+                            <span class="label">Hard</span>
+                            <span class="count">12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform Platforms -->
+                <div class="stats-panel platforms-panel glass-panel">
+                    <h3>Platforms</h3>
+                    <div class="platform-list">
+                        <div class="platform-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="platform-icon filter-invert">
+                            <span>LeetCode</span>
+                            <span class="platform-count">213</span>
+                        </div>
+                        <div class="platform-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GeeksForGeeks" class="platform-icon filter-invert">
+                            <span>GeeksForGeeks</span>
+                            <span class="platform-count">1</span>
+                        </div>
+                        <div class="platform-item">
+                            <i class="fa-brands fa-hackerrank hackerrank-icon"></i>
+                            <span>HackerRank</span>
+                            <span class="platform-count">54</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section observer-hidden">
+            <div class="section-header">
+                <h2>Featured <span class="accent">Projects</span></h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="project-grid">
+                
+                <!-- Project 1 -->
+                <article class="project-card glass-panel interactive-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-solid fa-car-side project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/laksh1411/Indian-Traffic-Sign-Recognition-using-Deep-Learning" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Traffic Sign Recognition</h3>
+                        <p>Indian Traffic Sign Recognition using deep learning methodologies to identify and classify regional signages with high accuracy.</p>
+                        <div class="tech-stack-card">
+                            <span>Deep Learning</span>
+                            <span>Computer Vision</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card glass-panel interactive-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-solid fa-leaf project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/laksh1411/Eco-Shopping-AI-Assistant" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Eco-Shopping AI Assistant</h3>
+                        <p>An intelligent assistant built to promote sustainable shopping habits by providing eco-friendly product alternatives and analytics.</p>
+                        <div class="tech-stack-card">
+                            <span>AI Integration</span>
+                            <span>HTML/JS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card glass-panel interactive-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-solid fa-chart-line project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/laksh1411/EDA-on-Government-Dataset" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Government Data EDA</h3>
+                        <p>Exploratory Data Analysis on extensive government datasets, extracting meaningful visual insights and statistical trends.</p>
+                        <div class="tech-stack-card">
+                            <span>Data Science</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card glass-panel interactive-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-solid fa-memory project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/laksh1411/Dynamic-Memory-Management-Visualizer" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Memory Management Visualizer</h3>
+                        <p>A Python-based tool visualizing dynamic memory allocation algorithms to aid in understanding complex OS-level processes.</p>
+                        <div class="tech-stack-card">
+                            <span>Python</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: Shopify Dashboard -->
+                <article class="project-card glass-panel interactive-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-solid fa-chart-pie project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/laksh1411" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Shopify Dashboard</h3>
+                        <p>A comprehensive dashboard analyzing e-commerce transactions and metrics to drive sales and identify key business trends.</p>
+                        <div class="tech-stack-card">
+                            <span>Data Analysis</span>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section observer-hidden">
+            <div class="glass-panel contact-panel">
+                <h2>Let's build something <span class="accent">extraordinary</span></h2>
+                <p>Currently open to new opportunities, collaborations, and conversations about AI and data.</p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/laksh1411" target="_blank" class="social-btn">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/laksh14/" target="_blank" class="social-btn">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:lakshsaluja2@gmail.com" class="social-btn">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Laksh Saluja. Designed & Built with passion.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
