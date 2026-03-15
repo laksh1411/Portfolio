@@ -130,45 +130,25 @@ observerElements.forEach(el => {
 
 
 // --- 4. Dynamic Hover Glow on Project Cards ---
-// Updates a CSS variable on the card to track mouse position for a cool border effect
-interactiveCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+// ... (previous logic for project cards)
 
-        // Set CSS variables for the pseudo-element 'before' border mask
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
-    });
-});
-
-// Update CSS to handle the dynamic mouse tracking border on cards
-// We inject a small style tag to handle this dynamic pseudo-element effect
-const style = document.createElement('style');
-style.innerHTML = `
-    .project-card::before {
-        background: radial-gradient(
-            800px circle at var(--mouse-x, 0) var(--mouse-y, 0),
-            var(--accent-cyan),
-            var(--accent-purple),
-            transparent 40%
-        );
-    }
-`;
-document.head.appendChild(style);
-
-// --- 5. Simple Glitch/Typing Effect on Load for Hero Text ---
-// Optional: A small initialization sequence
-window.addEventListener('DOMContentLoaded', () => {
-    if(glitchText) {
-        glitchText.style.opacity = '0';
-        setTimeout(() => {
-            glitchText.style.transition = 'opacity 1s ease';
-            glitchText.style.opacity = '1';
-        }, 300);
+// --- 5. Scroll Progress Indicator ---
+window.addEventListener('scroll', () => {
+    const scrollProgress = document.getElementById('scrollProgress');
+    if (scrollProgress) {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        scrollProgress.style.width = scrolled + "%";
     }
 });
+
+// Observe more elements for reveal
+document.querySelectorAll('.project-card, .skill-category, .cert-card, .experience-item').forEach(el => {
+    el.classList.add('observer-hidden');
+    sectionObserver.observe(el);
+});
+
 // --- 6. Preloader Removal ---
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
