@@ -1,6 +1,6 @@
 /* --- CSS Reset & Variables --- */
 :root {
-    /* Color Palette */
+    /* Color Palette - Dark (Default) */
     --bg-dark: #07090f;
     --bg-panel: rgba(15, 23, 42, 0.4);
     --bg-panel-hover: rgba(15, 23, 42, 0.7);
@@ -21,6 +21,33 @@
     
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Navbar */
+    --nav-bg: rgba(7, 9, 15, 0.8);
+    
+    /* Grid */
+    --grid-opacity: 0.03;
+
+    /* Cursor */
+    --cursor-inner: rgba(192, 132, 252, 0.15);
+    --cursor-outer: rgba(56, 189, 248, 0.08);
+}
+
+[data-theme="light"] {
+    --bg-dark: #f8fafc;
+    --bg-panel: rgba(255, 255, 255, 0.7);
+    --bg-panel-hover: rgba(255, 255, 255, 0.9);
+    --border-color: rgba(15, 23, 42, 0.1);
+    --border-hover: rgba(56, 189, 248, 0.6);
+    
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    
+    --nav-bg: rgba(248, 250, 252, 0.8);
+    --grid-opacity: 0.05;
+
+    --cursor-inner: rgba(192, 132, 252, 0.1);
+    --cursor-outer: rgba(56, 189, 248, 0.05);
 }
 
 * {
@@ -52,8 +79,8 @@ body::before {
     width: 100vw;
     height: 100vh;
     background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, var(--grid-opacity)) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, var(--grid-opacity)) 1px, transparent 1px);
     background-size: 50px 50px;
     z-index: -2;
     pointer-events: none;
@@ -63,6 +90,7 @@ body::before {
 .accent {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
@@ -112,7 +140,7 @@ body::before {
 }
 
 .navbar.scrolled {
-    background: rgba(7, 9, 15, 0.8);
+    background: var(--nav-bg);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 5%;
 }
@@ -156,6 +184,35 @@ body::before {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+/* --- Theme Toggle --- */
+.theme-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.theme-toggle-btn {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    color: var(--accent-cyan);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    font-size: 1.1rem;
+}
+
+.theme-toggle-btn:hover {
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+    transform: rotate(15deg) scale(1.1);
+    background: var(--bg-panel-hover);
 }
 
 /* --- Hero Section --- */
@@ -685,6 +742,7 @@ section {
     background: var(--gradient-primary);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -811,7 +869,7 @@ footer {
     color: var(--text-secondary);
     font-size: 0.9rem;
     border-top: 1px solid var(--border-color);
-    background: rgba(7, 9, 15, 0.8);
+    background: var(--nav-bg);
 }
 
 /* --- Animations & Interaction --- */
@@ -826,12 +884,16 @@ footer {
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--cursor-outer) 0%, transparent 70%);
     pointer-events: none;
     z-index: 10;
     transform: translate(-50%, -50%);
     transition: background 0.3s ease;
     mix-blend-mode: screen;
+}
+
+[data-theme="light"] .cursor-glow {
+    mix-blend-mode: multiply;
 }
 
 /* Scroll Reveals */

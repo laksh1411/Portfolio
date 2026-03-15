@@ -1,11 +1,49 @@
-// --- DOM Elements ---
+// --- 1. Theme Toggle Logic ---
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('i');
+const platformIcons = document.querySelectorAll('.platform-icon');
 const cursorGlow = document.getElementById('cursorGlow');
 const navbar = document.querySelector('.navbar');
 const interactiveCards = document.querySelectorAll('.interactive-card');
 const observerElements = document.querySelectorAll('.observer-hidden');
 const glitchText = document.querySelector('.glitch-text');
 
-// --- 1. Custom Cursor Glow Effect ---
+// Initialize theme
+const currentTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', currentTheme);
+updateThemeIcon(currentTheme);
+updatePlatformIcons(currentTheme);
+
+themeToggle.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    let nextTheme = theme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', nextTheme);
+    localStorage.setItem('theme', nextTheme);
+    updateThemeIcon(nextTheme);
+    updatePlatformIcons(nextTheme);
+});
+
+function updateThemeIcon(theme) {
+    if (theme === 'light') {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+    }
+}
+
+function updatePlatformIcons(theme) {
+    platformIcons.forEach(icon => {
+        if (theme === 'light') {
+            icon.classList.remove('filter-invert');
+        } else {
+            icon.classList.add('filter-invert');
+        }
+    });
+}
+
+// --- 2. Custom Cursor Glow Effect ---
+// ... (rest of the code)
 // Creates a glowing orb that follows the mouse cursor
 document.addEventListener('mousemove', (e) => {
     // Update position
@@ -21,13 +59,13 @@ document.addEventListener('mousemove', (e) => {
 const interactiveElements = document.querySelectorAll('a, button, .interactive-card');
 interactiveElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
-        cursorGlow.style.background = 'radial-gradient(circle, rgba(192, 132, 252, 0.15) 0%, transparent 60%)';
+        cursorGlow.style.background = 'radial-gradient(circle, var(--cursor-inner) 0%, transparent 60%)';
         cursorGlow.style.width = '500px';
         cursorGlow.style.height = '500px';
     });
     
     el.addEventListener('mouseleave', () => {
-        cursorGlow.style.background = 'radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%)';
+        cursorGlow.style.background = 'radial-gradient(circle, var(--cursor-outer) 0%, transparent 70%)';
         cursorGlow.style.width = '400px';
         cursorGlow.style.height = '400px';
     });
