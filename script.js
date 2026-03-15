@@ -169,3 +169,16 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 300);
     }
 });
+// --- 6. Preloader Removal ---
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Minimum display time to ensure user sees the animation
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.remove();
+            }, 800);
+        }, 1000);
+    }
+});
