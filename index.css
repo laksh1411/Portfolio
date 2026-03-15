@@ -43,11 +43,11 @@
     --text-primary: #0f172a;
     --text-secondary: #475569;
     
-    --nav-bg: rgba(248, 250, 252, 0.8);
+    --nav-bg: rgba(248, 250, 252, 0.9);
     --grid-opacity: 0.05;
 
-    --cursor-inner: rgba(192, 132, 252, 0.1);
-    --cursor-outer: rgba(56, 189, 248, 0.05);
+    --cursor-inner: rgba(100, 116, 139, 0.1);
+    --cursor-outer: rgba(100, 116, 139, 0.05);
 }
 
 * {
@@ -143,6 +143,14 @@ body::before {
     background: var(--nav-bg);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 5%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    z-index: 101;
 }
 
 .logo {
@@ -516,7 +524,7 @@ section {
 .total-dsa {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--text-primary);
 }
 
 .dsa-label {
@@ -558,7 +566,7 @@ section {
 
 .legend-item .count {
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--text-primary);
 }
 
 /* Topics Panel (Bar Chart) */
@@ -601,6 +609,7 @@ section {
     font-size: 0.85rem;
     font-weight: 600;
     text-align: left;
+    color: var(--text-primary);
 }
 
 /* Platforms */
@@ -643,7 +652,7 @@ section {
 
 .platform-item span:nth-of-type(1) {
     flex: 1;
-    color: var(--text-color);
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -974,7 +983,39 @@ footer {
 @media (max-width: 768px) {
     section { padding: 5rem 5%; }
     .hero-section { padding: 0 5%; padding-top: 100px; }
-    .nav-links { display: none; /* Can add hamburger menu later */ }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--nav-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 6rem 2rem;
+        gap: 2rem;
+        transition: var(--transition-smooth);
+        border-left: 1px solid var(--border-color);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .theme-toggle-wrapper {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
     .hero-blob { width: 300px; height: 300px; }
     .section-header h2 { font-size: 2rem; }
     .hero-image-ring { width: 220px; height: 220px; }

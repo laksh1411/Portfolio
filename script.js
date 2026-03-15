@@ -10,7 +10,7 @@ const glitchText = document.querySelector('.glitch-text');
 
 // Initialize theme
 const currentTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.setAttribute('data-theme', currentTheme);
+// document.documentElement.setAttribute('data-theme', currentTheme); // Handled in head script
 updateThemeIcon(currentTheme);
 updatePlatformIcons(currentTheme);
 
@@ -22,6 +22,28 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', nextTheme);
     updateThemeIcon(nextTheme);
     updatePlatformIcons(nextTheme);
+});
+
+// Mobile Menu Logic
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+const mobileMenuIcon = mobileMenuBtn.querySelector('i');
+
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    if (navLinks.classList.contains('active')) {
+        mobileMenuIcon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+        mobileMenuIcon.classList.replace('fa-xmark', 'fa-bars');
+    }
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuIcon.classList.replace('fa-xmark', 'fa-bars');
+    });
 });
 
 function updateThemeIcon(theme) {
