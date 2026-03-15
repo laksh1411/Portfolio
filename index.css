@@ -656,6 +656,54 @@ section {
     font-weight: 600;
 }
 
+/* --- Certifications Section --- */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: var(--transition-smooth);
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cert-issuer {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.cert-verify-btn {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.cert-verify-btn:hover {
+    color: var(--accent-purple);
+    gap: 0.8rem;
+}
+
 /* --- Experience Section --- */
 .experience-timeline {
     position: relative;
