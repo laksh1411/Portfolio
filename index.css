@@ -145,6 +145,13 @@ body::before {
     padding: 1rem 5%;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    order: 2;
+}
+
 .mobile-menu-btn {
     display: none;
     font-size: 1.5rem;
@@ -986,6 +993,16 @@ footer {
     
     .mobile-menu-btn {
         display: block;
+    }
+
+    .nav-right {
+        gap: 1rem;
+    }
+
+    .theme-toggle-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
     }
 
     .nav-links {
