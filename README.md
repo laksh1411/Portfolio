@@ -5,7 +5,7 @@ Welcome to my personal portfolio repository! This project showcases my skills, e
 ## 🚀 Live Demo
 
 You can view the live, deployed version of my portfolio here:  
-**[👉 View Live Portfolio](https://portfolio-lakshsaluja2-4175s-projects.vercel.app/)**  
+**[👉 View Live Portfolio](https://lakshsaluja.vercel.app/)**  
 *(Deployment automatically managed by Vercel)*
 
 ## 🛠️ Built With
