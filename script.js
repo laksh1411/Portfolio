@@ -81,15 +81,17 @@ document.addEventListener('mousemove', (e) => {
 const interactiveElements = document.querySelectorAll('a, button, .interactive-card');
 interactiveElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
-        cursorGlow.style.background = 'radial-gradient(circle, var(--cursor-inner) 0%, transparent 60%)';
+        cursorGlow.style.background = 'radial-gradient(circle, var(--accent-gold) 0%, transparent 60%)';
         cursorGlow.style.width = '500px';
         cursorGlow.style.height = '500px';
+        cursorGlow.style.opacity = '0.35';
     });
     
     el.addEventListener('mouseleave', () => {
         cursorGlow.style.background = 'radial-gradient(circle, var(--cursor-outer) 0%, transparent 70%)';
         cursorGlow.style.width = '400px';
         cursorGlow.style.height = '400px';
+        cursorGlow.style.opacity = '0.15';
     });
 });
 
