@@ -51,6 +51,15 @@
 
     --accent-gold: #b8860b;
     --accent-amber: #cd7f32;
+
+    /* Multi-Colour Card Variables (Soft Light Mode) */
+    --card-about: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(255, 191, 0, 0.05));
+    --card-education: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(0, 125, 255, 0.04));
+    --card-skills: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(124, 58, 237, 0.04));
+    --card-experience: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(5, 150, 105, 0.04));
+    --card-certs: linear-gradient(135deg, rgba(236, 72, 153, 0.08), rgba(219, 39, 119, 0.04));
+    --card-coding: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(217, 119, 6, 0.04));
+    --card-projects: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(79, 70, 229, 0.04));
 }
 
 * {
@@ -179,8 +188,22 @@ body::before {
 .glass-panel:hover {
     border-color: var(--border-hover);
     background: var(--bg-panel-hover);
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Light Mode Card Tints */
+[data-theme="light"] #about .glass-panel { background: var(--card-about); }
+[data-theme="light"] #education .glass-panel { background: var(--card-education); }
+[data-theme="light"] #skills .glass-panel { background: var(--card-skills); }
+[data-theme="light"] #experience .glass-panel { background: var(--card-experience); }
+[data-theme="light"] #certs .glass-panel { background: var(--card-certs); }
+[data-theme="light"] #coding .glass-panel { background: var(--card-coding); }
+[data-theme="light"] #projects .glass-panel { background: var(--card-projects); }
+
+[data-theme="light"] .glass-panel:hover {
+    background: white;
+    border-color: var(--accent-gold);
 }
 
 .section-header {
@@ -493,21 +516,7 @@ section {
     gap: 1rem;
 }
 
-.skill-tag {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-color);
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: var(--accent-gold);
-    transition: var(--transition-smooth);
-}
-
-.skill-tag:hover {
-    border-color: var(--accent-amber);
-    background: rgba(212, 175, 55, 0.1);
-    transform: translateY(-2px);
-}
+/* Skill tags handled in bottom section */
 
 /* --- Coding Practice Section --- */
 .coding-stats-grid {
@@ -991,6 +1000,32 @@ section {
     border-radius: 50%;
     border: 1px solid var(--border-color);
     transition: var(--transition-smooth);
+}
+
+.skill-tag {
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.skill-tag i {
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+}
+
+.skill-tag:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--accent-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
 }
 
 .social-btn:hover i {
