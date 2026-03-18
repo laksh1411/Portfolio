@@ -948,11 +948,31 @@ section {
 
 .tech-stack-card {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
     color: var(--text-secondary);
     font-family: var(--font-heading);
     font-size: 0.85rem;
-    opacity: 0.8;
+}
+
+.tech-stack-card span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+}
+
+.tech-stack-card span:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--accent-gold);
+}
+
+.tech-stack-card i {
+    font-size: 1rem;
 }
 
 /* --- Contact Section --- */
