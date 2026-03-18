@@ -207,7 +207,7 @@ body::before {
 }
 
 .section-header {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -478,7 +478,7 @@ body::before {
 
 /* --- Sections Common --- */
 section {
-    padding: 8rem 10%;
+    padding: 5rem 10%;
 }
 
 /* --- About Section --- */
@@ -1173,7 +1173,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    section { padding: 5rem 5%; }
+    section { padding: 3rem 5%; }
     .hero-section { padding: 0 5%; padding-top: 100px; }
     
     .mobile-menu-btn {
