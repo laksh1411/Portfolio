@@ -478,7 +478,7 @@ body::before {
 
 /* --- Sections Common --- */
 section {
-    padding: 5rem 10%;
+    padding: 3.5rem 10%;
 }
 
 /* --- About Section --- */
@@ -1173,7 +1173,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    section { padding: 3rem 5%; }
+    section { padding: 2.5rem 5%; }
     .hero-section { padding: 0 5%; padding-top: 100px; }
     
     .mobile-menu-btn {
