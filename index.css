@@ -490,6 +490,15 @@ section {
     color: var(--text-secondary);
 }
 
+.about-text p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* --- Skills Section --- */
 .skills-container {
     display: grid;
