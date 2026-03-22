@@ -901,6 +901,7 @@ section {
     height: 100%;
     position: relative;
     overflow: hidden;
+    padding: 0 !important; /* Override glass-panel padding */
 }
 
 /* Border glow hover effect wrapper created dynamically in JS */
@@ -993,6 +994,52 @@ section {
 
 .tech-stack-card i {
     font-size: 1rem;
+}
+
+.project-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.btn-live {
+    margin-top: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--gradient-primary);
+    color: var(--bg-dark);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    width: fit-content;
+}
+
+.btn-live:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
 }
 
 /* --- Contact Section --- */
