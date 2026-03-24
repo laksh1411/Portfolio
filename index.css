@@ -1270,3 +1270,58 @@ footer {
     .hero-image-ring { width: 220px; height: 220px; }
     .cta-group { flex-direction: column; align-items: center; }
 }
+
+/* --- Achievements Section --- */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card .experience-date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.achievement-card p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.achievement-icon {
+    font-size: 2.2rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+[data-theme='light'] #achievements .glass-panel { 
+    background: var(--card-coding); 
+}
+
+.achievement-card:nth-child(1) { transition-delay: 0.1s; }
+.achievement-card:nth-child(2) { transition-delay: 0.2s; }
+.achievement-card:nth-child(3) { transition-delay: 0.3s; }
