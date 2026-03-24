@@ -232,8 +232,9 @@ body::before {
     width: 100%;
     padding: 1.5rem 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    gap: 2rem;
     z-index: 100;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid transparent;
@@ -266,11 +267,12 @@ body::before {
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: 2px;
+    margin-right: auto;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
 }
 
@@ -278,7 +280,7 @@ body::before {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     position: relative;
     transition: color 0.3s ease;
 }
